@@ -1,0 +1,8 @@
+{
+  "script":"no-dep/NoDep",
+  "id":"NoDep",
+  "data": {},
+  "dependencies":{
+    "@eui/lit-component":"0.12.x"
+  }
+}

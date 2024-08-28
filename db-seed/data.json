@@ -1,0 +1,112 @@
+[
+  {
+    "_id": { "$oid": "63446df7ca83f9398aa7bb2c" },
+    "name": "Musl",
+    "category": "APPLICATION",
+    "engineer": {
+      "name": "Rich Felker",
+      "email": "dalias@libc.org"
+    },
+    "description": "C standard library intended for operating systems based on the Linux kernel, released under the MIT License.",
+    "localDateTime": "2021-04-07T10:37:49.6240178",
+    "versions": [
+      "1.2.0",
+      "1.2.1",
+      "1.2.2",
+      "1.2.3"
+    ],
+    "dependencies": [ ]
+  },
+  {
+    "_id": { "$oid": "63446c07c463c94b0d7803c5" },
+    "name": "OpenRC",
+    "category": "APPLICATION",
+    "engineer": {
+      "name": "Roy Marples",
+      "email": "roy@marples.name"
+    },
+    "description": "A dependency-based init system for Unix-like computer operating systems.",
+    "localDateTime": "2021-07-03T10:37:49.6240178",
+    "versions": [
+      "0.45.0",
+      "0.45.1",
+      "0.45.2"
+    ],
+    "dependencies": [ ]
+  },
+  {
+    "_id": { "$oid": "63446b34c463c94b0d7803c4" },
+    "name": "BusyBox",
+    "category": "APPLICATION",
+    "engineer": {
+      "name": "Erik Andersen",
+      "email": "andersen@codepoet.org"
+    },
+    "description": "A software suite that provides several Unix utilities in a single executable file.",
+    "localDateTime": "2021-09-30T10:37:49.6240178",
+    "versions": [
+      "1.33.8",
+      "1.33.9",
+      "1.34.0",
+      "1.34.1"
+    ],
+    "dependencies": [ ]
+  },
+  {
+    "_id": { "$oid": "6344674b5e263cbf01d865df" },
+    "name": "Redis",
+    "category": "DATABASE",
+    "engineer": {
+      "name": "Salvatore Sanfilippo",
+      "email": "antirez@gmail.com"
+    },
+    "description": "Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices.",
+    "localDateTime": "2022-10-05T10:37:49.6240178",
+    "versions": [
+      "7.0.0",
+      "7.0.1",
+      "7.0.2",
+      "7.0.3",
+      "7.0.4"
+    ],
+    "dependencies": []
+  },
+  {
+    "_id": { "$oid": "6344646ec39536769538e527" },
+    "name": "Alpine",
+    "category": "APPLICATION",
+    "engineer": {
+      "name": "Natanael Copa",
+      "email": "ncopa@alpinelinux.org"
+    },
+    "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure.",
+    "localDateTime": "2022-08-09T10:37:49.6240178",
+    "versions": [
+      "3.15.8",
+      "3.15.9",
+      "3.16.0",
+      "3.16.1",
+      "3.16.2"
+    ],
+    "dependencies": [ "BusyBox", "OpenRC", "Musl" ]
+  },
+  {
+    "_id": { "$oid": "6344674b5e263cbf01d865de" },
+    "name": "Database-logger",
+    "category": "DATABASE",
+    "engineer": {
+      "name": "Jonathan Berkeley",
+      "email": "jonathan.berkeley@ericsson.com"
+    },
+    "description": "Basic logger sidecar for database activity",
+    "localDateTime": "2022-07-18T10:37:49.624",
+    "versions": [
+      "1.0.0",
+      "1.1.2"
+    ],
+    "dependencies": [
+      "Redis",
+      "Alpine"
+    ]
+  }
+]

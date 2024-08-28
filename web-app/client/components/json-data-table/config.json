@@ -1,0 +1,8 @@
+{
+  "script":"json-data-table/JsonDataTable",
+  "id":"JsonDataTable",
+  "data": {},
+  "dependencies":{
+    "@eui/lit-component":"0.12.x"
+  }
+}

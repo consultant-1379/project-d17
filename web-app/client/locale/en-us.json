@@ -1,0 +1,8 @@
+{
+  "CONTAINER_TITLE": "web-app",
+  "CONTAINER_TITLE_SHORT": "web-app",
+  "MENU_TITLE": "Menu",
+  "MENU": {
+    "APP_1": "App One"
+  }
+}

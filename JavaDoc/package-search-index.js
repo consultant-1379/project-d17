@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.ericsson.microservicemanager"},{"l":"com.ericsson.microservicemanager.app.controllers"},{"l":"com.ericsson.microservicemanager.app.dto"},{"l":"com.ericsson.microservicemanager.app.entities"},{"l":"com.ericsson.microservicemanager.app.repositories"}];updateSearchResults();

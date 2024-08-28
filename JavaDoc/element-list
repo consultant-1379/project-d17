@@ -1,0 +1,5 @@
+com.ericsson.microservicemanager
+com.ericsson.microservicemanager.app.controllers
+com.ericsson.microservicemanager.app.dto
+com.ericsson.microservicemanager.app.entities
+com.ericsson.microservicemanager.app.repositories

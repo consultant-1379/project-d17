@@ -1,0 +1,53 @@
+version: '3'
+
+volumes:
+  mongodb-data:
+    external: false
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    volumes:
+      - "mongodb-data:/data/db"
+      - "./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro"
+    networks:
+      - micro-net
+
+  microservice-manager:
+    build: ./MicroserviceManager
+    container_name: microservice-manager
+    environment:
+      - MONGODB_CONNSTRING=mongodb://user:pass@mongodb:27017
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "mongodb"
+    links:
+      - "mongodb"
+    networks:
+      - micro-net
+
+  web-app:
+    build: ./web-app
+    container_name: web-app
+    ports:
+      - "9090:9090"
+    depends_on:
+      - "microservice-manager"
+    networks:
+      - micro-net
+
+  db-seed:
+    build: ./db-seed
+    container_name: db-seed
+    depends_on:
+      - "mongodb"
+    links:
+      - "mongodb"
+    networks:
+      - micro-net
+
+networks:
+  micro-net:
+    driver: bridge
